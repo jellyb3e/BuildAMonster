@@ -85,11 +85,13 @@ class Monster extends Phaser.Scene {
 
     update() {
         let my = this.my;    // create an alias to this.my for readability
+        
         if (this.aKey.isDown) {
             for (let asset in my.sprite) {
                 my.sprite[asset].x -= 1;
             }
         }
+
         if (this.dKey.isDown) {
             for (let asset in my.sprite) {
                 my.sprite[asset].x += 1;
